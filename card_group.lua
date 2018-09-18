@@ -18,6 +18,14 @@ function CardGroup:get_cards()
 	return cards
 end
 
+function CardGroup:show_cards()
+	local cards_str = ""
+	for i,v in ipairs(self.__cards) do
+		cards_str = cards_str .. v:get_card_str() .. " "
+	end
+	print(cards_str)
+end
+
 function CardGroup:get_card_type()
 	assert(#self.__cards == 5)
 	local sum_logic_value = 0 --总计数

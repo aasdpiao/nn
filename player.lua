@@ -24,7 +24,7 @@ function Player:set_cards(cards)
     local result_type, max_card, result_cards = self.__card_group:get_card_type()
 	print("result_type",result_type)
 	print("max_card",max_card)
-	print_r(result_cards)
+	self.__card_group:show_cards()
 end
 
 return Player
